@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import MemberEntry from '../Components/MemberEntry';
 import './member.css';
 import CountUp from 'react-countup';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 
 function Member() {
   const [members, setMembers] = useState([]);
@@ -70,33 +72,42 @@ function Member() {
             <div className="create">
               <div className="create-text">Create Member</div>
               <form className="create-form">
-                <label>Name</label>
-                <input
-                  type="text"
-                  required
-                  value={name}
-                  onChange={(e) => {
-                    setName(e.target.value);
+                <Box
+                  component="form"
+                  sx={{
+                    '& > :not(style)': { m: 1.5, width: '33ch' },
                   }}
-                ></input>
-                <label>Sex</label>
-                <input
-                  type="text"
-                  required
-                  value={sex}
-                  onChange={(e) => {
-                    setSex(e.target.value);
-                  }}
-                ></input>
-                <label>Age</label>
-                <input
-                  type="text"
-                  required
-                  value={age}
-                  onChange={(e) => {
-                    setAge(e.target.value);
-                  }}
-                ></input>
+                  noValidate
+                  autoComplete="off"
+                >
+                  <TextField
+                    id="name-basic"
+                    label="name"
+                    variant="outlined"
+                    value={name}
+                    onChange={(e) => {
+                      setName(e.target.value);
+                    }}
+                  />
+                  <TextField
+                    id="sex-basic"
+                    label="sex"
+                    variant="outlined"
+                    value={sex}
+                    onChange={(e) => {
+                      setSex(e.target.value);
+                    }}
+                  />
+                  <TextField
+                    id="age-basic"
+                    label="age"
+                    variant="outlined"
+                    value={age}
+                    onChange={(e) => {
+                      setAge(e.target.value);
+                    }}
+                  />
+                </Box>
 
                 <button
                   onClick={() => {
@@ -116,7 +127,7 @@ function Member() {
                 duration={2}
                 className="count-up"
               />
-              <p className='members-currently'>members currently</p>
+              <p className="members-currently">members currently</p>
             </div>
           </div>
         </div>

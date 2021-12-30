@@ -51,6 +51,8 @@
     font-size: 3rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 
 }
@@ -69,6 +71,7 @@ input {
 button {
     margin-top: 2rem;
     height: 4rem;
+    width: 80%;
     background-color: aliceblue;
     border: none;
 

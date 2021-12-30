@@ -9,6 +9,10 @@
             "dest": "/member"
         },
         {
+            "src": "/member?",
+            "dest": "/member?"
+        },
+        {
             "src": "/order",
             "dest": "/order"
         },
