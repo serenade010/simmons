@@ -3,7 +3,7 @@
         {
             "src": "/",
             "dest": "/member"
-        },
+        },  
         {
             "src": "/member",
             "dest": "/member"

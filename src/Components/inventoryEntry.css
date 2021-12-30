@@ -1,0 +1,17 @@
+.inv-entry {
+    display: flex;
+    width: 80%;
+    /* background-color: aqua; */
+    justify-content: space-evenly;
+    margin: 0 3rem;
+}
+
+.inv-name {
+    align-self: center;
+    font-size: 2rem;
+}
+
+.rop {
+    font-size: 3rem;
+    align-self: center;
+}
