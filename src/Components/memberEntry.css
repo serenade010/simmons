@@ -1,0 +1,52 @@
+.entry {
+    width: 100%;
+    height: 5rem;
+    /* background-color: antiquewhite; */
+    display: flex;
+    font-size: 4rem;
+    margin: 1rem 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.id {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1
+}
+
+.sex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1
+}
+
+.age {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1
+}
+
+.monetary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1
+}
+
+.residence {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1
+}

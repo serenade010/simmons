@@ -1,24 +1,115 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import Member from './Pages/Member';
+import Order from './Pages/Order';
+import Sales from './Pages/Sales';
+import Customer from './Pages/Customer';
+import Value from './Pages/Value';
+import Inventory from './Pages/Inventory';
+import Prediction from './Pages/Prediction';
+import Planning from './Pages/Planning';
+import { useState } from 'react';
 
 function App() {
+  const [current, setCurrent] = useState(1);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="container">
+        <div className="left">
+          <Link
+            to="/member"
+            className="link"
+            onClick={() => {
+              setCurrent(1);
+            }}
+            id={current === 1 ? 'ddd' : ''}
+          >
+            <div clasName="title">Member</div>
+          </Link>
+          <Link
+            to="/order"
+            className="link"
+            onClick={() => {
+              setCurrent(2);
+            }}
+            id={current === 2 ? 'ddd' : ''}
+          >
+            <div clasName="title">Order</div>
+          </Link>
+          <Link
+            to="/sales"
+            className="link"
+            onClick={() => {
+              setCurrent(3);
+            }}
+            id={current === 3 ? 'ddd' : ''}
+          >
+            <div clasName="title">Sales</div>
+          </Link>
+          <Link
+            to="/customer"
+            className="link"
+            onClick={() => {
+              setCurrent(4);
+            }}
+            id={current === 4 ? 'ddd' : ''}
+          >
+            <div clasName="title">Customer</div>
+          </Link>
+          <Link
+            to="/value"
+            className="link"
+            onClick={() => {
+              setCurrent(5);
+            }}
+            id={current === 5 ? 'ddd' : ''}
+          >
+            <div clasName="title">Analytics</div>
+          </Link>
+          <Link
+            to="/inventory"
+            className="link"
+            onClick={() => {
+              setCurrent(6);
+            }}
+            id={current === 6 ? 'ddd' : ''}
+          >
+            <div clasName="title">Inventory</div>
+          </Link>
+          <Link
+            to="/prediction"
+            className="link"
+            onClick={() => {
+              setCurrent(7);
+            }}
+            id={current === 7 ? 'ddd' : ''}
+          >
+            <div clasName="title">Prediction</div>
+          </Link>
+          <Link
+            to="/planning"
+            className="link"
+            onClick={() => {
+              setCurrent(8);
+            }}
+            id={current === 8 ? 'ddd' : ''}
+          >
+            <div clasName="title">Planning</div>
+          </Link>
+        </div>
+      </div>
+      <Routes>
+        <Route path="/" element={<Member />}></Route>
+        <Route path="/member" element={<Member />}></Route>
+        <Route path="/order" element={<Order />}></Route>
+        <Route path="/sales" element={<Sales />}></Route>
+        <Route path="/customer" element={<Customer />}></Route>
+        <Route path="/value" element={<Value />}></Route>
+        <Route path="/inventory" element={<Inventory />}></Route>
+        <Route path="/prediction" element={<Prediction />}></Route>
+        <Route path="/planning" element={<Planning />}></Route>
+      </Routes>
+    </Router>
   );
 }
 

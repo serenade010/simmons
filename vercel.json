@@ -1,0 +1,40 @@
+{
+    "routes": [
+        {
+            "src": "/",
+            "dest": "/member"
+        },
+        {
+            "src": "/member",
+            "dest": "/member"
+        },
+        {
+            "src": "/order",
+            "dest": "/order"
+        },
+        {
+            "src": "/sales",
+            "dest": "/sales"
+        },
+        {
+            "src": "/customer",
+            "dest": "/customer"
+        },
+        {
+            "src": "/value",
+            "dest": "/value"
+        },
+        {
+            "src": "/inventory",
+            "dest": "/inventory"
+        },
+        {
+            "src": "/prediction",
+            "dest": "/prediction"
+        },
+        {
+            "src": "/planning",
+            "dest": "/planning"
+        }
+    ]
+}
