@@ -13,7 +13,7 @@ function Member() {
   useEffect(() => {
     fetchMember();
   }, []);
-  const api_url = 'http://127.0.0.1:5000/member';
+  const api_url = 'https://simmons-backend.herokuapp.com/member';
   const fetchMember = async () => {
     const response = await fetch(api_url);
     const data = await response.json();
