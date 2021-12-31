@@ -4,6 +4,7 @@ import './member.css';
 import CountUp from 'react-countup';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import axios from 'axios';
 
 function Member() {
   const [members, setMembers] = useState([]);
@@ -13,29 +14,25 @@ function Member() {
   useEffect(() => {
     fetchMember();
   }, []);
-  const api_url = 'https://simmons-backend.herokuapp.com/member';
+  const api_url = 'https://simmons2-backend.herokuapp.com/member';
   const fetchMember = async () => {
-    const response = await fetch(api_url);
-    const data = await response.json();
-    setMembers(data);
+    axios
+      .get(api_url)
+      .then((response) => setMembers(response.data))
+      .catch((error) => console.log(error));
   };
 
   const createMember = async () => {
-    await fetch(api_url, {
-      method: 'POST',
-
-      headers: {
-        'Content-Type': 'application/json',
-      },
-
-      body: JSON.stringify({
+    axios
+      .post(api_url, {
         member_name: name,
         sex: sex,
         age: age,
-      }),
-    });
-
-    await fetchMember();
+      })
+      .then((response) => {
+        fetchMember();
+      })
+      .catch((error) => console.log(error));
   };
 
   return (
@@ -71,7 +68,7 @@ function Member() {
           <div className="create-container">
             <div className="create">
               <div className="create-text">Create Member</div>
-              <form className="create-form">
+              <div className="create-form">
                 <Box
                   component="form"
                   sx={{
@@ -116,7 +113,7 @@ function Member() {
                 >
                   Create
                 </button>
-              </form>
+              </div>
             </div>
           </div>
           <div className="data-container">

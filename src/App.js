@@ -24,7 +24,7 @@ function App() {
             }}
             id={current === 1 ? 'ddd' : ''}
           >
-            <div clasName="title">Member</div>
+            <div className="title">Member</div>
           </Link>
           <Link
             to="/order"
@@ -34,7 +34,7 @@ function App() {
             }}
             id={current === 2 ? 'ddd' : ''}
           >
-            <div clasName="title">Order</div>
+            <div className="title">Order</div>
           </Link>
           <Link
             to="/sales"
@@ -44,7 +44,7 @@ function App() {
             }}
             id={current === 3 ? 'ddd' : ''}
           >
-            <div clasName="title">Sales</div>
+            <div className="title">Sales</div>
           </Link>
           <Link
             to="/customer"
@@ -54,7 +54,7 @@ function App() {
             }}
             id={current === 4 ? 'ddd' : ''}
           >
-            <div clasName="title">Customer</div>
+            <div className="title">Customer</div>
           </Link>
           <Link
             to="/value"
@@ -64,7 +64,7 @@ function App() {
             }}
             id={current === 5 ? 'ddd' : ''}
           >
-            <div clasName="title">Analytics</div>
+            <div className="title">Analytics</div>
           </Link>
           <Link
             to="/inventory"
@@ -74,7 +74,7 @@ function App() {
             }}
             id={current === 6 ? 'ddd' : ''}
           >
-            <div clasName="title">Inventory</div>
+            <div className="title">Inventory</div>
           </Link>
           <Link
             to="/prediction"
@@ -84,7 +84,7 @@ function App() {
             }}
             id={current === 7 ? 'ddd' : ''}
           >
-            <div clasName="title">Prediction</div>
+            <div className="title">Prediction</div>
           </Link>
           <Link
             to="/planning"
@@ -94,7 +94,7 @@ function App() {
             }}
             id={current === 8 ? 'ddd' : ''}
           >
-            <div clasName="title">Planning</div>
+            <div className="title">Planning</div>
           </Link>
         </div>
       </div>
