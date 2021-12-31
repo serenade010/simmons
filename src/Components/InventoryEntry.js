@@ -11,7 +11,7 @@ function InventoryEntry(props) {
         <Box
           component="form"
           sx={{
-            '& > :not(style)': { m: 1.3, width: '25ch' },
+            '& > :not(style)': { m: 1.0, width: '23ch' },
           }}
           noValidate
           autoComplete="off"

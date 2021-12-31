@@ -63,7 +63,7 @@ function Member() {
               />
             );
           })}
-        </div>
+        </div> 
         <div className="right-side">
           <div className="create-container">
             <div className="create">
