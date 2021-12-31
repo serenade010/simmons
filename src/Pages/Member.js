@@ -72,10 +72,11 @@ function Member() {
                 <Box
                   component="form"
                   sx={{
-                    '& > :not(style)': { m: 1.5, width: '33ch' },
+                    '& > :not(style)': { m: 1.0, width: '25ch' },
                   }}
                   noValidate
                   autoComplete="off"
+                  className='box-form'
                 >
                   <TextField
                     id="name-basic"
@@ -124,7 +125,6 @@ function Member() {
                 duration={2}
                 className="count-up"
               />
-              <p className="members-currently">members currently</p>
             </div>
           </div>
         </div>

@@ -8,11 +8,10 @@ function InventoryEntry(props) {
     <div className="inv-entry">
       <div className="inv-name"> {props.name}</div>
       <div>
-        {' '}
         <Box
           component="form"
           sx={{
-            '& > :not(style)': { m: 1.5, width: '35ch' },
+            '& > :not(style)': { m: 1.3, width: '25ch' },
           }}
           noValidate
           autoComplete="off"

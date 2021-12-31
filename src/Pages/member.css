@@ -43,7 +43,7 @@
 
 .create-text {
     margin: 1rem;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 
@@ -53,8 +53,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
 
-
+.box-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -71,7 +76,7 @@ input {
 button {
     margin-top: 2rem;
     height: 4rem;
-    width: 80%;
+    width: 10rem;
     background-color: aliceblue;
     border: none;
 
