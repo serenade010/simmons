@@ -8,10 +8,17 @@ import Analytics from './Pages/Analytics';
 import Inventory from './Pages/Inventory';
 import Prediction from './Pages/Prediction';
 import Planning from './Pages/Planning';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
-  const [current, setCurrent] = useState(1);
+  const [current, setCurrent] = useState(() => {
+    const saved = Number(localStorage.getItem('current'));
+    return saved || 1;
+  });
+  useEffect(() => {
+    localStorage.setItem('current', current);
+  }, [current]);
+
   return (
     <Router>
       <div className="container">

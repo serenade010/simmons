@@ -16,7 +16,7 @@
     width: 80%;
     height: 20vh;
     background-color: white;
-    border-radius: 2rem;
+    border-radius: 1rem;
 
 
 }
@@ -28,7 +28,7 @@
     width: 80%;
     height: 60vh;
     background-color: white;
-    border-radius: 2rem;
+    border-radius: 1rem;
     overflow: auto;
 
 }

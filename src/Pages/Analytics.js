@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Value() {
-  return <div>value</div>;
+function Analytics() {
+  return <div>Analytics</div>;
 }
 
-export default Value;
+export default Analytics;

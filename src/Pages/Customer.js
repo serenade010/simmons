@@ -14,7 +14,7 @@ function Customer() {
 
   useEffect(() => {
     fetchdata();
-  });
+  }, []);
   return (
     <div className="customer">
       {datas.map((data) => {
