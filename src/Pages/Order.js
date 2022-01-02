@@ -5,6 +5,7 @@ import OrderEntry from '../Components/OrderEntry';
 function Order() {
   const [orders, setOrders] = useState([]);
   const [id, setId] = useState();
+  const [price, setPrice] = useState();
   const [product, setProduct] = useState();
   const [quantity, setQuantity] = useState();
   const api_url = 'http://127.0.0.1:5000/order';
@@ -23,14 +24,17 @@ function Order() {
     axios
       .post(api_url, {
         member_id: id,
-        total_amount: 50 * quantity,
-        products: [{ product_id: 2, quantity: 10 }],
+        total_amount: price * quantity,
+        product_id: product,
+        quantity: quantity,
+        date: '2021-12-25',
       })
       .then((response) => {
         fetchOrder();
         setId('');
         setProduct('');
         setQuantity('');
+        setPrice('');
       })
       .catch((error) => console.log(error));
   };
@@ -55,10 +59,13 @@ function Order() {
             onChange={(e) => {
               if (e.target.value === 'BeautyCare加州帝皇') {
                 setProduct(1);
+                setPrice(68500);
               } else if (e.target.value === 'BeautyRest加寬雙人') {
                 setProduct(2);
+                setPrice(58000);
               } else {
                 setProduct(3);
+                setProduct(50000);
               }
             }}
           >
@@ -73,7 +80,7 @@ function Order() {
             className="order-form"
             value={quantity}
             onChange={(e) => {
-              setQuantity(e.target.value);
+              setQuantity(Number(e.target.value));
             }}
           />
           <button
