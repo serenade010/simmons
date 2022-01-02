@@ -1,0 +1,29 @@
+.orederEntry {
+    display: flex;
+    width: 90%;
+    font-size: 3.5rem;
+    justify-content: space-around;
+}
+
+
+.date {
+    width: 20%;
+    /* background-color: aqua; */
+    text-align: center;
+
+}
+
+.member-id {
+    width: 20%;
+    text-align: center;
+}
+
+.order-id {
+    width: 20%;
+    text-align: center;
+}
+
+.amount {
+    width: 20%;
+    text-align: center;
+}

@@ -4,7 +4,7 @@ import Member from './Pages/Member';
 import Order from './Pages/Order';
 import Sales from './Pages/Sales';
 import Customer from './Pages/Customer';
-import Value from './Pages/Value';
+import Analytics from './Pages/Analytics';
 import Inventory from './Pages/Inventory';
 import Prediction from './Pages/Prediction';
 import Planning from './Pages/Planning';
@@ -104,7 +104,7 @@ function App() {
         <Route path="/order" element={<Order />}></Route>
         <Route path="/sales" element={<Sales />}></Route>
         <Route path="/customer" element={<Customer />}></Route>
-        <Route path="/value" element={<Value />}></Route>
+        <Route path="/analytics" element={<Analytics />}></Route>
         <Route path="/inventory" element={<Inventory />}></Route>
         <Route path="/prediction" element={<Prediction />}></Route>
         <Route path="/planning" element={<Planning />}></Route>

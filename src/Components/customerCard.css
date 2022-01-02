@@ -1,0 +1,17 @@
+.customer-card {
+    width: 25rem;
+    height: 25rem;
+    background-color: white;
+    margin: 5rem;
+    color: gray;
+    font-size: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.customer-card:hover {
+    transform: scale(1.1);
+}

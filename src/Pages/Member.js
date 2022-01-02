@@ -14,7 +14,7 @@ function Member() {
   useEffect(() => {
     fetchMember();
   }, []);
-  const api_url = 'https://simmons2-backend.herokuapp.com/member';
+  const api_url = 'http://127.0.0.1:5000/member';
   const fetchMember = async () => {
     axios
       .get(api_url)
@@ -31,6 +31,9 @@ function Member() {
       })
       .then((response) => {
         fetchMember();
+        setAge('');
+        setSex('');
+        setName('');
       })
       .catch((error) => console.log(error));
   };
@@ -63,7 +66,7 @@ function Member() {
               />
             );
           })}
-        </div> 
+        </div>
         <div className="right-side">
           <div className="create-container">
             <div className="create">
@@ -76,7 +79,7 @@ function Member() {
                   }}
                   noValidate
                   autoComplete="off"
-                  className='box-form'
+                  className="box-form"
                 >
                   <TextField
                     id="name-basic"
@@ -122,7 +125,7 @@ function Member() {
               <CountUp
                 start={0}
                 end={members.length}
-                duration={2}
+                duration={1}
                 className="count-up"
               />
             </div>
