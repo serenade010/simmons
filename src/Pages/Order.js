@@ -10,7 +10,7 @@ function Order() {
   const [product, setProduct] = useState();
   const [date, setDate] = useState();
   const [quantity, setQuantity] = useState();
-  const api_url = 'http://127.0.0.1:5000/order';
+  const api_url = 'https://simmons-stage-backend.herokuapp.com/order';
 
   useEffect(() => {
     fetchOrder();

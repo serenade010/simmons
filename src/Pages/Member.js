@@ -5,7 +5,7 @@ import CountUp from 'react-countup';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import axios from 'axios';
-  
+
 function Member() {
   const [members, setMembers] = useState([]);
   const [name, setName] = useState('');
@@ -14,7 +14,7 @@ function Member() {
   useEffect(() => {
     fetchMember();
   }, []);
-  const api_url = 'http://127.0.0.1:5000/member';
+  const api_url = 'https://simmons-stage-backend.herokuapp.com/member';
   const fetchMember = async () => {
     axios
       .get(api_url)

@@ -14,7 +14,7 @@ import {
 } from 'recharts';
 
 function Sales() {
-  const api_url = 'http://127.0.0.1:5000/ssale';
+  const api_url = 'https://simmons-stage-backend.herokuapp.com/ssale';
   // const [sales, setSales] = useState([]);
   const [sale, setSale] = useState([]);
   const [year, setYear] = useState(2019);

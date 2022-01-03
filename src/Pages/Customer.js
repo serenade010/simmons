@@ -4,7 +4,7 @@ import CustomerCard from '../Components/CustomerCard';
 import './customer.css';
 
 function Customer() {
-  const api_url = 'http://127.0.0.1:5000/active-rate';
+  const api_url = 'https://simmons-stage-backend.herokuapp.com/active-rate';
   const [datas, setDatas] = useState([]);
   const fetchdata = async () => {
     axios.get(api_url).then((response) => {
