@@ -16,3 +16,10 @@
     font-size: 2.5rem;
     align-self: center;
 }
+
+.inv-form {
+    width: 12rem;
+    height: 4rem;
+    font-size: 2rem;
+    padding-left: 1rem;
+}

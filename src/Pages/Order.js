@@ -6,7 +6,9 @@ function Order() {
   const [orders, setOrders] = useState([]);
   const [id, setId] = useState();
   const [price, setPrice] = useState();
+  const [name, setName] = useState();
   const [product, setProduct] = useState();
+  const [date, setDate] = useState();
   const [quantity, setQuantity] = useState();
   const api_url = 'http://127.0.0.1:5000/order';
 
@@ -27,7 +29,7 @@ function Order() {
         total_amount: price * quantity,
         product_id: product,
         quantity: quantity,
-        date: '2021-12-25',
+        date: date,
       })
       .then((response) => {
         fetchOrder();
@@ -35,6 +37,10 @@ function Order() {
         setProduct('');
         setQuantity('');
         setPrice('');
+        setDate('');
+      })
+      .then(() => {
+        fetchOrder();
       })
       .catch((error) => console.log(error));
   };
@@ -47,7 +53,7 @@ function Order() {
           <input
             type="text"
             placeholder="member ID"
-            className="order-form"
+            className="order-form-member"
             value={id}
             onChange={(e) => {
               setId(e.target.value);
@@ -55,15 +61,19 @@ function Order() {
           />
           <select
             className="order-form"
-            value={product}
+            value={name}
             onChange={(e) => {
               if (e.target.value === 'BeautyCare加州帝皇') {
+                setName('BeautyCare加州帝皇');
                 setProduct(1);
+
                 setPrice(68500);
               } else if (e.target.value === 'BeautyRest加寬雙人') {
+                setName('BeautyCare加州帝皇');
                 setProduct(2);
                 setPrice(58000);
               } else {
+                setName('BeautyCare加州帝皇');
                 setProduct(3);
                 setProduct(50000);
               }
@@ -77,12 +87,21 @@ function Order() {
           <input
             type="number"
             placeholder="Quantity"
-            className="order-form"
+            className="order-form-quatity"
+            min={0}
             value={quantity}
             onChange={(e) => {
               setQuantity(Number(e.target.value));
             }}
           />
+          <input
+            className="oreder-date"
+            type="date"
+            value={date}
+            onChange={(e) => {
+              setDate(e.target.value);
+            }}
+          ></input>
           <button
             className="create-order-btn"
             onClick={() => {
