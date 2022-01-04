@@ -12,11 +12,12 @@
 }
 
 .chart-container {
-    width: 70%;
-    height: 70%;
-    font-size: 50rem;
-    background-color: white;
+    width: 90%;
+    height: 80%;
+    font-size: 30rem;
+    background-color: #fff;
     padding: 3rem;
+
 }
 
 
@@ -25,7 +26,7 @@
 .sales-title {
     font-size: 5rem;
     position: absolute;
-    top: 3rem;
+    top: 1rem;
     left: 5rem;
 }
 
