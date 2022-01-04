@@ -1,6 +1,7 @@
 import { React, useState } from 'react';
 import './inventoryEntry.css';
 
+
 function InventoryEntry(props) {
   const [time, setTime] = useState();
   const [risk, setRisk] = useState();

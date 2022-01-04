@@ -5,15 +5,26 @@ import CountUp from 'react-countup';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import axios from 'axios';
+import Loader from 'react-loader-spinner';
 
 function Member() {
   const [members, setMembers] = useState([]);
   const [name, setName] = useState('');
   const [sex, setSex] = useState('');
   const [age, setAge] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const changeState = () => {
+    setLoading(!loading);
+  };
+
   useEffect(() => {
     fetchMember();
   }, []);
+  useEffect(() => {
+    changeState();
+    // eslint-disable-next-line
+  }, [members]);
   const api_url = 'https://simmons-stage-backend.herokuapp.com/member';
   const fetchMember = async () => {
     axios
@@ -37,103 +48,191 @@ function Member() {
       })
       .catch((error) => console.log(error));
   };
-
-  return (
-    <div className="member">
-      <div className="member-header">
-        <div>Member</div>
-      </div>
-      <div className="member-dash">
-        <div className="table-container">
-          <div className="table-title">
-            <div className="id">ID</div>
-            <div className="name">Name</div>
-            <div className="sex">Sex</div>
-            <div className="age">Age</div>
-            <div className="monetary">Monetary</div>
-          </div>
-
-          {members.map((member) => {
-            return (
-              <MemberEntry
-                key={member.id}
-                id={member.id}
-                name={member.member_name}
-                sex={member.sex}
-                age={member.age}
-                residence={member.residence}
-                monetary={member.monetary}
-              />
-            );
-          })}
+  if (loading) {
+    return (
+      <div className="member">
+        <div className="member-header">
+          <div>Member</div>
         </div>
-        <div className="right-side">
-          <div className="create-container">
-            <div className="create">
-              <div className="create-text">Create Member</div>
-              <div className="create-form">
-                <Box
-                  component="form"
-                  sx={{
-                    '& > :not(style)': { m: 1.0, width: '25ch' },
-                  }}
-                  noValidate
-                  autoComplete="off"
-                  className="box-form"
-                >
-                  <TextField
-                    id="name-basic"
-                    label="name"
-                    variant="outlined"
-                    value={name}
-                    onChange={(e) => {
-                      setName(e.target.value);
-                    }}
-                  />
-                  <TextField
-                    id="sex-basic"
-                    label="sex"
-                    variant="outlined"
-                    value={sex}
-                    onChange={(e) => {
-                      setSex(e.target.value);
-                    }}
-                  />
-                  <TextField
-                    id="age-basic"
-                    label="age"
-                    variant="outlined"
-                    value={age}
-                    onChange={(e) => {
-                      setAge(e.target.value);
-                    }}
-                  />
-                </Box>
+        <div className="member-dash">
+          <div className="table-container">
+            <div className="table-title">
+              <div className="id">ID</div>
+              <div className="name">Name</div>
+              <div className="sex">Sex</div>
+              <div className="age">Age</div>
+              <div className="monetary">Monetary</div>
+            </div>
 
-                <button
-                  onClick={() => {
-                    createMember();
-                  }}
-                >
-                  Create
-                </button>
+            <div className="loading-container">
+              <Loader type="Oval" color="#777" height={100} width={100} />
+            </div>
+          </div>
+          <div className="right-side">
+            <div className="create-container">
+              <div className="create">
+                <div className="create-text">Create Member</div>
+                <div className="create-form">
+                  <Box
+                    component="form"
+                    sx={{
+                      '& > :not(style)': { m: 1.0, width: '25ch' },
+                    }}
+                    noValidate
+                    autoComplete="off"
+                    className="box-form"
+                  >
+                    <TextField
+                      id="name-basic"
+                      label="name"
+                      variant="outlined"
+                      value={name}
+                      onChange={(e) => {
+                        setName(e.target.value);
+                      }}
+                    />
+                    <TextField
+                      id="sex-basic"
+                      label="sex"
+                      variant="outlined"
+                      value={sex}
+                      onChange={(e) => {
+                        setSex(e.target.value);
+                      }}
+                    />
+                    <TextField
+                      id="age-basic"
+                      label="age"
+                      variant="outlined"
+                      value={age}
+                      onChange={(e) => {
+                        setAge(e.target.value);
+                      }}
+                    />
+                  </Box>
+
+                  <button
+                    onClick={() => {
+                      createMember();
+                    }}
+                  >
+                    Create
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="data-container">
+              <div className="member-count">
+                <CountUp
+                  start={0}
+                  end={members.length}
+                  duration={1}
+                  className="count-up"
+                />
               </div>
             </div>
           </div>
-          <div className="data-container">
-            <div className="member-count">
-              <CountUp
-                start={0}
-                end={members.length}
-                duration={1}
-                className="count-up"
-              />
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div className="member">
+        <div className="member-header">
+          <div>Member</div>
+        </div>
+        <div className="member-dash">
+          <div className="table-container">
+            <div className="table-title">
+              <div className="id">ID</div>
+              <div className="name">Name</div>
+              <div className="sex">Sex</div>
+              <div className="age">Age</div>
+              <div className="monetary">Monetary</div>
+            </div>
+
+            {members.map((member) => {
+              return (
+                <MemberEntry
+                  key={member.id}
+                  id={member.id}
+                  name={member.member_name}
+                  sex={member.sex}
+                  age={member.age}
+                  residence={member.residence}
+                  monetary={member.monetary}
+                />
+              );
+            })}
+          </div>
+          <div className="right-side">
+            <div className="create-container">
+              <div className="create">
+                <div className="create-text">Create Member</div>
+                <div className="create-form">
+                  <Box
+                    component="form"
+                    sx={{
+                      '& > :not(style)': { m: 1.0, width: '25ch' },
+                    }}
+                    noValidate
+                    autoComplete="off"
+                    className="box-form"
+                  >
+                    <TextField
+                      id="name-basic"
+                      label="name"
+                      variant="outlined"
+                      value={name}
+                      onChange={(e) => {
+                        setName(e.target.value);
+                      }}
+                    />
+                    <TextField
+                      id="sex-basic"
+                      label="sex"
+                      variant="outlined"
+                      value={sex}
+                      onChange={(e) => {
+                        setSex(e.target.value);
+                      }}
+                    />
+                    <TextField
+                      id="age-basic"
+                      label="age"
+                      variant="outlined"
+                      value={age}
+                      onChange={(e) => {
+                        setAge(e.target.value);
+                      }}
+                    />
+                  </Box>
+
+                  <button
+                    onClick={() => {
+                      createMember();
+                    }}
+                  >
+                    Create
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="data-container">
+              <div className="member-count">
+                <CountUp
+                  start={0}
+                  end={members.length}
+                  duration={1}
+                  className="count-up"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Member;

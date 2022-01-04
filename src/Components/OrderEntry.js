@@ -1,7 +1,9 @@
 import React from 'react';
 import './orderEntry.css';
 
+
 function OrderEntry(props) {
+  
   return (
     <div className="orederEntry">
       <div className="date">

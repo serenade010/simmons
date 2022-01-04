@@ -64,7 +64,7 @@ function App() {
             <div className="title">Customer</div>
           </Link>
           <Link
-            to="/value"
+            to="/analytics"
             className="link"
             onClick={() => {
               setCurrent(5);

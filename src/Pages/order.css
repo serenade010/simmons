@@ -49,6 +49,7 @@
     margin-left: 3rem;
 
 
+
     /* background-color: antiquewhite; */
 }
 
@@ -60,6 +61,8 @@
     font-size: 1.3rem;
     padding: 0 1.5rem;
     border-color: gray;
+    border-radius: 0.5rem;
+
 
 }
 
@@ -71,6 +74,7 @@
     font-size: 1.3rem;
     padding: 0 1.5rem;
     border-color: gray;
+
 }
 
 .order-form-quatity {
@@ -99,4 +103,13 @@
     font-size: 2rem;
     width: 10rem;
     height: 5rem;
+}
+
+.delete-btn {
+    font-size: 2rem;
+    width: 5%;
+    height: 10%;
+    border-radius: 1rem;
+    float: right;
+
 }

@@ -119,31 +119,31 @@ const datas = {
     {
       name: '2020/Q4',
       estimation: 3490,
-      data: 4300,
+      data: 2300,
       amt: 2100,
     },
     {
       name: '2021/Q1',
-      estimation: 1890,
-      data: 4800,
+      estimation: 3890,
+      data: 2800,
       amt: 2181,
     },
     {
       name: '2021/Q2',
       estimation: 2390,
-      data: 3800,
+      data: 1900,
       amt: 2500,
     },
     {
       name: '2021/Q3',
       estimation: 3490,
-      data: 4300,
+      data: 3500,
       amt: 2100,
     },
     {
       name: '2021/Q4',
       estimation: 3490,
-      data: 4300,
+      data: 3300,
       amt: 2100,
     },
   ],
@@ -175,7 +175,7 @@ const datas = {
     {
       name: '2020/Q1',
       estimation: 1890,
-      data: 4800,
+      data: 1300,
       amt: 2181,
     },
     {
@@ -199,7 +199,7 @@ const datas = {
     {
       name: '2021/Q1',
       estimation: 1890,
-      data: 4800,
+      data: 1800,
       amt: 2181,
     },
     {
@@ -211,13 +211,13 @@ const datas = {
     {
       name: '2021/Q3',
       estimation: 3490,
-      data: 4300,
+      data: 2300,
       amt: 2100,
     },
     {
       name: '2021/Q4',
       estimation: 3490,
-      data: 4300,
+      data: 3500,
       amt: 2100,
     },
   ],
