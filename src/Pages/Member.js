@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import MemberEntry from '../Components/MemberEntry';
 import './member.css';
 import CountUp from 'react-countup';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
 import axios from 'axios';
 import Loader from 'react-loader-spinner';
 
@@ -41,6 +39,7 @@ function Member() {
         age: age,
       })
       .then((response) => {
+        setLoading(!loading);
         fetchMember();
         setAge('');
         setSex('');
@@ -70,55 +69,42 @@ function Member() {
           </div>
           <div className="right-side">
             <div className="create-container">
-              <div className="create">
-                <div className="create-text">Create Member</div>
-                <div className="create-form">
-                  <Box
-                    component="form"
-                    sx={{
-                      '& > :not(style)': { m: 1.0, width: '25ch' },
-                    }}
-                    noValidate
-                    autoComplete="off"
-                    className="box-form"
-                  >
-                    <TextField
-                      id="name-basic"
-                      label="name"
-                      variant="outlined"
-                      value={name}
-                      onChange={(e) => {
-                        setName(e.target.value);
-                      }}
-                    />
-                    <TextField
-                      id="sex-basic"
-                      label="sex"
-                      variant="outlined"
-                      value={sex}
-                      onChange={(e) => {
-                        setSex(e.target.value);
-                      }}
-                    />
-                    <TextField
-                      id="age-basic"
-                      label="age"
-                      variant="outlined"
-                      value={age}
-                      onChange={(e) => {
-                        setAge(e.target.value);
-                      }}
-                    />
-                  </Box>
-
-                  <button
-                    onClick={() => {
-                      createMember();
-                    }}
-                  >
-                    Create
-                  </button>
-                </div>
+              <div className="create-text">Create Member</div>
+              <div className="create-form">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className="order-form-home"
+                  value={name}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                />
+                <input
+                  type="text"
+                  placeholder="Sex"
+                  className="order-form-home"
+                  value={sex}
+                  onChange={(e) => {
+                    setSex(e.target.value);
+                  }}
+                />
+                <input
+                  type="text"
+                  placeholder="Age"
+                  className="order-form-home"
+                  value={age}
+                  onChange={(e) => {
+                    setAge(e.target.value);
+                  }}
+                />
+                <button
+                  onClick={() => {
+                    createMember();
+                  }}
+                >
+                  Create
+                </button>
               </div>
             </div>
             <div className="data-container">
@@ -167,55 +153,42 @@ function Member() {
           </div>
           <div className="right-side">
             <div className="create-container">
-              <div className="create">
-                <div className="create-text">Create Member</div>
-                <div className="create-form">
-                  <Box
-                    component="form"
-                    sx={{
-                      '& > :not(style)': { m: 1.0, width: '25ch' },
-                    }}
-                    noValidate
-                    autoComplete="off"
-                    className="box-form"
-                  >
-                    <TextField
-                      id="name-basic"
-                      label="name"
-                      variant="outlined"
-                      value={name}
-                      onChange={(e) => {
-                        setName(e.target.value);
-                      }}
-                    />
-                    <TextField
-                      id="sex-basic"
-                      label="sex"
-                      variant="outlined"
-                      value={sex}
-                      onChange={(e) => {
-                        setSex(e.target.value);
-                      }}
-                    />
-                    <TextField
-                      id="age-basic"
-                      label="age"
-                      variant="outlined"
-                      value={age}
-                      onChange={(e) => {
-                        setAge(e.target.value);
-                      }}
-                    />
-                  </Box>
-
-                  <button
-                    onClick={() => {
-                      createMember();
-                    }}
-                  >
-                    Create
-                  </button>
-                </div>
+              <div className="create-text">Create Member</div>
+              <div className="create-form">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className="order-form-home"
+                  value={name}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                />
+                <input
+                  type="text"
+                  placeholder="Sex"
+                  className="order-form-home"
+                  value={sex}
+                  onChange={(e) => {
+                    setSex(e.target.value);
+                  }}
+                />
+                <input
+                  type="text"
+                  placeholder="Age"
+                  className="order-form-home"
+                  value={age}
+                  onChange={(e) => {
+                    setAge(e.target.value);
+                  }}
+                />
+                <button
+                  onClick={() => {
+                    createMember();
+                  }}
+                >
+                  Create
+                </button>
               </div>
             </div>
             <div className="data-container">

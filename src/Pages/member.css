@@ -39,6 +39,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .create-text {
@@ -49,10 +50,12 @@
 
 .create-form {
     font-size: 3rem;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    /* background-color: antiquewhite; */
 }
 
 .box-form {
@@ -131,4 +134,10 @@ button:hover {
     position: absolute;
     right: 23%;
     bottom: 32%;
+}
+
+.order-form-home {
+    width: 70%;
+    height: 10%;
+    padding: 1rem;
 }

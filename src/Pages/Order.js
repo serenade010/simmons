@@ -79,7 +79,7 @@ function Order() {
           <div className="create-order-container">
             <input
               type="text"
-              placeholder="member ID"
+              placeholder="ID"
               className="order-form-member"
               value={id}
               onChange={(e) => {

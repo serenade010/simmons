@@ -4,6 +4,7 @@ import './planning.css';
 function Planning() {
   return (
     <div className="planning">
+      <div className="planning-title">近8週的物料規劃:</div>
       <div className="planning-container">
         <div className="planning-entry">
           2/21: 送出成品: 80加州帝皇床墊 40加寬雙人床墊 40標準床墊{' '}
@@ -32,6 +33,9 @@ function Planning() {
         <div className="planning-entry">
           1/10: 送出訂單 訂單內容: 車花410、拉鍊210、泡棉510 1/03: 送出訂單
           訂單內容: 散熱層1500
+        </div>
+        <div className="planning-entry">
+          1/03: 送出訂單 訂單內容: 散熱層1500
         </div>
       </div>
     </div>

@@ -56,10 +56,10 @@
 
 .order-form {
     /* padding: 10px 30px; */
-    width: 15rem;
-    height: 5rem;
-    font-size: 1.3rem;
-    padding: 0 1.5rem;
+    width: 15%;
+    height: 60%;
+    font-size: 1.2rem;
+    padding: 0 1rem;
     border-color: gray;
     border-radius: 0.5rem;
 
@@ -68,19 +68,18 @@
 
 .order-form-member {
     /* padding: 10px 30px; */
-    width: 10rem;
-    margin-right: 1rem;
-    height: 5rem;
+    width: 10%;
+    height: 60%;
     font-size: 1.3rem;
-    padding: 0 1.5rem;
+    padding: 0 0.5rem;
     border-color: gray;
 
 }
 
 .order-form-quatity {
-    width: 10rem;
+    width: 13%;
     margin-right: 1rem;
-    height: 5rem;
+    height: 60%;
     font-size: 1.3rem;
     padding: 0 1.5rem;
     border-color: gray;
@@ -89,8 +88,8 @@
 
 .oreder-date {
     /* padding: 10px 30px; */
-    width: 16rem;
-    height: 5rem;
+    width: 20%;
+    height: 60%;
     font-size: 1.3rem;
     padding: 0 1.5rem;
     border-color: gray;

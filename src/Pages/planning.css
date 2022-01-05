@@ -10,16 +10,37 @@
     align-items: center;
 }
 
+.planning-title {
+    display: flex;
+    position: absolute;
+    font-size: 4rem;
+    top: 2rem;
+    left: 5rem;
+
+}
 
 .planning-container {
-    margin-top: 5%;
+    margin-top: 10%;
     background-color: white;
     display: flex;
     flex-direction: column;
     width: 90%;
-    height: 90%;
+    height: 70%;
     justify-content: space-evenly;
     font-size: 3rem;
     border-radius: 1rem;
-    padding: 1rem;
+    padding-top: 10rem;
+    overflow: auto;
+}
+
+.planning-entry {
+    font-size: 1.5rem;
+    padding: 2rem 5rem;
+    border-bottom: 1px solid #777;
+
+
+}
+
+.planning-entry:hover {
+    transform: scale(1.1);
 }
