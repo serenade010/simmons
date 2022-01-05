@@ -141,3 +141,7 @@ button:hover {
     height: 10%;
     padding: 1rem;
 }
+
+.planning-item {
+    font-size: 1.5rem;
+}
