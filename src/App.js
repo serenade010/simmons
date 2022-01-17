@@ -9,6 +9,7 @@ import Inventory from './Pages/Inventory';
 import Prediction from './Pages/Prediction';
 import Planning from './Pages/Planning';
 import { useState, useEffect } from 'react';
+import View from './Pages/View';
 
 function App() {
   const [current, setCurrent] = useState(() => {
@@ -74,12 +75,22 @@ function App() {
             <div className="title">Analytics</div>
           </Link>
           <Link
-            to="/inventory"
+            to="/view"
             className="link"
             onClick={() => {
               setCurrent(6);
             }}
             id={current === 6 ? 'ddd' : ''}
+          >
+            <div className="title">View</div>
+          </Link>
+          <Link
+            to="/inventory"
+            className="link"
+            onClick={() => {
+              setCurrent(7);
+            }}
+            id={current === 7 ? 'ddd' : ''}
           >
             <div className="title">Inventory</div>
           </Link>
@@ -87,9 +98,9 @@ function App() {
             to="/prediction"
             className="link"
             onClick={() => {
-              setCurrent(7);
+              setCurrent(8);
             }}
-            id={current === 7 ? 'ddd' : ''}
+            id={current === 8 ? 'ddd' : ''}
           >
             <div className="title">Prediction</div>
           </Link>
@@ -97,9 +108,9 @@ function App() {
             to="/planning"
             className="link"
             onClick={() => {
-              setCurrent(8);
+              setCurrent(9);
             }}
-            id={current === 8 ? 'ddd' : ''}
+            id={current === 9 ? 'ddd' : ''}
           >
             <div className="title">Planning</div>
           </Link>
@@ -112,6 +123,7 @@ function App() {
         <Route path="/sales" element={<Sales />}></Route>
         <Route path="/customer" element={<Customer />}></Route>
         <Route path="/analytics" element={<Analytics />}></Route>
+        <Route path="/view" element={<View />}></Route>
         <Route path="/inventory" element={<Inventory />}></Route>
         <Route path="/prediction" element={<Prediction />}></Route>
         <Route path="/planning" element={<Planning />}></Route>

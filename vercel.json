@@ -3,7 +3,7 @@
         {
             "src": "/",
             "dest": "/member"
-        },  
+        },
         {
             "src": "/member",
             "dest": "/member"
@@ -25,8 +25,12 @@
             "dest": "/customer"
         },
         {
-            "src": "/value",
-            "dest": "/value"
+            "src": "/analytics",
+            "dest": "/analytics"
+        },
+        {
+            "src": "/view",
+            "dest": "/view"
         },
         {
             "src": "/inventory",
