@@ -14,7 +14,7 @@ function Order() {
   const [date, setDate] = useState();
   const [quantity, setQuantity] = useState();
   const [loading, setLoading] = useState(false);
-  const api_url = 'https://simmons-stage-backend.herokuapp.com/order';
+  const api_url = 'https://python-nccu-mis.herokuapp.com/order';
   let deleteNum = 0;
 
   const changeState = () => {

@@ -5,7 +5,7 @@ import Loader from 'react-loader-spinner';
 import axios from 'axios';
 
 function Analytics() {
-  const api_url = 'https://simmons-stage-backend.herokuapp.com/rfm';
+  const api_url = 'https://python-nccu-mis.herokuapp.com/rfm';
   const [members, setMembers] = useState([]);
   const [loading, setLoading] = useState(false);
   const fetchData = async () => {

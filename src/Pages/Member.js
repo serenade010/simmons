@@ -23,7 +23,7 @@ function Member() {
     changeState();
     // eslint-disable-next-line
   }, [members]);
-  const api_url = 'https://simmons-stage-backend.herokuapp.com/member';
+  const api_url = 'https://python-nccu-mis.herokuapp.com/member';
   const fetchMember = async () => {
     axios
       .get(api_url)

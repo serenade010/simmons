@@ -5,7 +5,7 @@ import './customer.css';
 import Loader from 'react-loader-spinner';
 
 function Customer() {
-  const api_url = 'https://simmons-stage-backend.herokuapp.com/active-rate';
+  const api_url = 'https://python-nccu-mis.herokuapp.com/active-rate';
   const [datas, setDatas] = useState([]);
   const [loading, setLoading] = useState(false);
   const fetchdata = async () => {

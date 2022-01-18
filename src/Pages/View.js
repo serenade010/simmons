@@ -6,17 +6,16 @@ import Loader from 'react-loader-spinner';
 
 function View() {
   const [materials, setMaterials] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const api_url = 'https://python-nccu-mis.herokuapp.com/inventory';
 
   const fetchData = async () => {
-    axios
-      .get('https://simmons-stage-backend.herokuapp.com/inventory')
-      .then((response) => {
-        setMaterials(response.data['materials']);
-        setProducts(response.data['products']);
-        setLoading(false);
-      });
+    axios.get(api_url).then((response) => {
+      setMaterials(response.data['materials']);
+      setProducts(response.data['products']);
+      setLoading(false);
+    });
   };
   useEffect(() => {
     fetchData();
@@ -48,7 +47,7 @@ function View() {
             return (
               <div className="view-material">
                 <span>{material.material_name}</span>
-                <span>{material.leading_time * 10}</span>
+                <span>{material.on_hand_balance}</span>
               </div>
             );
           })}

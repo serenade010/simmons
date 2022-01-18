@@ -14,7 +14,7 @@ import {
 } from 'recharts';
 
 function Sales() {
-  const api_url = 'https://simmons-stage-backend.herokuapp.com/ssale';
+  const api_url = 'https://python-nccu-mis.herokuapp.com/ssale';
 
   // const [sales, setSales] = useState([]);
 
