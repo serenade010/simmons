@@ -25,8 +25,10 @@
 
 .orderlist {
     margin-top: 5%;
+    padding-top: 4rem;
     width: 80%;
     height: 60vh;
+    padding-top: 3%;
     background-color: white;
     border-radius: 1rem;
     overflow: auto;
@@ -50,12 +52,12 @@
 
 
 
-    /* background-color: antiquewhite; */
+
 }
 
 
 .order-form {
-    /* padding: 10px 30px; */
+
     width: 15%;
     height: 60%;
     font-size: 1.2rem;
@@ -67,7 +69,7 @@
 }
 
 .order-form-member {
-    /* padding: 10px 30px; */
+
     width: 10%;
     height: 60%;
     font-size: 1.3rem;
@@ -87,7 +89,7 @@
 
 
 .oreder-date {
-    /* padding: 10px 30px; */
+
     width: 20%;
     height: 60%;
     font-size: 1.3rem;
@@ -111,4 +113,35 @@
     border-radius: 1rem;
     float: right;
 
+}
+
+.order-table-title {
+    display: flex;
+    width: 58%;
+    left: 28%;
+    font-size: 3rem;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 35%;
+    background-color: aliceblue;
+    border-top: 10px solid white;
+}
+
+@media screen and (max-width:1300px) {
+    .orderlist {
+        padding-top: 8%;
+    }
+
+    .order-table-title {
+        border-top: 35px solid white;
+        top: 33%
+    }
+}
+
+@media screen and (max-width:1000px) {
+
+
+    .order-table-title {
+        border-top: 50px solid white;
+    }
 }

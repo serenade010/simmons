@@ -1,0 +1,36 @@
+.successMsg {
+    font-size: 2rem;
+    position: absolute;
+    width: 25rem;
+    height: 5rem;
+    background-color: lightblue;
+    z-index: 1;
+    bottom: 5rem;
+    left: 28vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 0.5rem;
+    color: white;
+    animation-name: soaring;
+    animation-duration: 5s;
+}
+
+
+
+
+
+@keyframes soaring {
+    0% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.95;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}

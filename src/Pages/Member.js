@@ -4,12 +4,14 @@ import './member.css';
 import CountUp from 'react-countup';
 import axios from 'axios';
 import Loader from 'react-loader-spinner';
+import SuccessMsg from '../Components/SuccessMsg';
 
 function Member() {
   const [members, setMembers] = useState([]);
   const [name, setName] = useState('');
   const [sex, setSex] = useState('');
   const [age, setAge] = useState('');
+  const [delay, setDelay] = useState('0');
   const [loading, setLoading] = useState(false);
 
   const changeState = () => {
@@ -185,6 +187,7 @@ function Member() {
                 <button
                   onClick={() => {
                     createMember();
+                    setDelay('5000');
                   }}
                 >
                   Create
@@ -203,6 +206,7 @@ function Member() {
             </div>
           </div>
         </div>
+        <SuccessMsg delay={delay} message="Member Created!" />
       </div>
     );
   }

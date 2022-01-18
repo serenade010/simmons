@@ -4,6 +4,7 @@ import axios from 'axios';
 import OrderEntry from '../Components/OrderEntry';
 import Loader from 'react-loader-spinner';
 import { AiFillDelete } from 'react-icons/ai';
+import SuccessMsg from '../Components/SuccessMsg';
 
 function Order() {
   const [orders, setOrders] = useState([]);
@@ -14,6 +15,7 @@ function Order() {
   const [date, setDate] = useState();
   const [quantity, setQuantity] = useState();
   const [loading, setLoading] = useState(false);
+  const [delay, setDelay] = useState('0');
   const api_url = 'https://python-nccu-mis.herokuapp.com/order';
   let deleteNum = 0;
 
@@ -215,20 +217,20 @@ function Order() {
               className="create-order-btn"
               onClick={() => {
                 createOrder();
+                setDelay('5000');
               }}
             >
               create
             </button>
           </div>
         </div>
+        <div className="order-table-title">
+          <div className="Date">Order Date</div>
+          <div className="memberId">Member ID</div>
+          <div className="orderId">Order ID</div>
+          <div className="Amount">Amount</div>
+        </div>
         <div className="orderlist">
-          <OrderEntry
-            orderId="Order ID"
-            memberId="Member ID"
-            date="Date"
-            amount="Amount"
-            id="order-list-title"
-          />
           {orders.map((order) => {
             return (
               <OrderEntry
@@ -248,6 +250,7 @@ function Order() {
             <AiFillDelete size={20} />
           </button>
         </div>
+        <SuccessMsg delay={delay} message="Order Created!" />
       </div>
     );
   }
