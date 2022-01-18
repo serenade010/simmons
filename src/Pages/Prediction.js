@@ -57,7 +57,7 @@ function Prediction() {
             <XAxis
               dataKey="name"
               style={{
-                fontSize: '3rem',
+                fontSize: '2rem',
               }}
             />
             <YAxis

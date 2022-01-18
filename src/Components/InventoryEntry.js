@@ -1,27 +1,23 @@
 import { React, useState } from 'react';
 import './inventoryEntry.css';
 
-
 function InventoryEntry(props) {
   const [time, setTime] = useState();
   const [risk, setRisk] = useState();
   const [znum, setZmun] = useState(0);
   const [rop, setRop] = useState(0);
+
   const calculateROP = () => {
     setRop(30 * time + Math.pow(25 * time, 0.5) * znum);
   };
 
-  // useEffect(() => {
-  //   calculateROP();
-
-  // }, [time, risk, znum]);
   return (
     <div className="inv-entry">
       <div className="inv-name"> {props.name}</div>
       <div className="inv-time">
         <input
           type="number"
-          placeholder="前置時間"
+          placeholder={`前置時間: ${props.time}`}
           className="inv-form"
           min={0}
           value={time}

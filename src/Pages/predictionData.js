@@ -72,6 +72,16 @@ const datas = {
       data: 66,
       amt: 50,
     },
+    {
+      name: '2022/Q1',
+      estimation: 80,
+      amt: 2100,
+    },
+    {
+      name: '2022/Q2',
+      estimation: 70,
+      amt: 2100,
+    },
   ],
   data2: [
     {
@@ -146,6 +156,16 @@ const datas = {
       data: 100,
       amt: 2100,
     },
+    {
+      name: '2022/Q1',
+      estimation: 80,
+      amt: 2100,
+    },
+    {
+      name: '2022/Q2',
+      estimation: 70,
+      amt: 2100,
+    },
   ],
   data3: [
     {
@@ -218,6 +238,16 @@ const datas = {
       name: '2021/Q4',
       estimation: 70,
       data: 60,
+      amt: 2100,
+    },
+    {
+      name: '2022/Q1',
+      estimation: 80,
+      amt: 2100,
+    },
+    {
+      name: '2022/Q2',
+      estimation: 60,
       amt: 2100,
     },
   ],
