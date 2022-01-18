@@ -79,7 +79,7 @@ const datas = {
     },
     {
       name: '2022/Q2',
-      estimation: 70,
+      estimation: 60,
       amt: 2100,
     },
   ],
@@ -158,7 +158,7 @@ const datas = {
     },
     {
       name: '2022/Q1',
-      estimation: 80,
+      estimation: 135,
       amt: 2100,
     },
     {
@@ -242,7 +242,7 @@ const datas = {
     },
     {
       name: '2022/Q1',
-      estimation: 80,
+      estimation: 110,
       amt: 2100,
     },
     {
